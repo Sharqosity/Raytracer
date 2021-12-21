@@ -1,4 +1,7 @@
-class PinholeCamera {
+import * as THREE from '../three/src/Three.js';
+import { Ray } from './raytracer.js';
+
+export class PinholeCamera {
 	constructor(eye, target, up, fov, aspect) {
 		this.eye = eye.clone();
 		this.target = target.clone();

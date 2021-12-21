@@ -1,6 +1,8 @@
+import * as THREE from './three/src/Three.js';
+
 /* Minimalist OBJ loader, returns three.js Geometry */
 
-function loadOBJAsMesh(url, onLoad, onProgress, onError) {
+export function loadOBJAsMesh(url, onLoad, onProgress, onError) {
 	let loader = new THREE.FileLoader(THREE.DefaultLoadingManager);
 	new THREE.FileLoader().load(url,
 		function(text) {
